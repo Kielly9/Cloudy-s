@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body{
+	display: flex;
+	background: linear-gradient(45deg, #030556, #33BEFF, #fffde7);
+}
+.container{ 
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 8%;
+}
+.gallery{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 30px;
+}
+.gallery img{
+	width: 100%;
+}
+
+
+/* ----- Designer's link -----*/
+.ownership {
+	position: absolute;
+	right: 5%;
+	bottom: 7%;
+	font-size: 15px;
+	color: black;
+}
+.ownership a{
+	background-image: linear-gradient(
+	to right,
+	#03065A,
+	#03065A 50%,
+	#000 50%
+	);
+	background-size: 200% 100%;
+	background-position: -100%;
+	display: inline-block;
+	padding: 5px 0;
+	position: relative;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: all 0.3s ease-in-out;
+}
+.ownership a:before{
+	content: '';
+	background: #03065A;
+	display: block;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	width: 0;
+	height: 3px;
+	transition: all 0.3s ease-in-out;
+}
+.ownership a:hover {
+	background-position: 0;
+}
+.ownership a:hover:before{
+	width:  100%;
+}
+/* ----- End Of Designer's link -----*/
+.row{
+	position: absolute;
+	left: 8%;
+	bottom: 7%;
+}
+.row a{
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-right: 20px;
+	border: 2px solid #fff;
+}
